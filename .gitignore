@@ -1,23 +1,19 @@
+# Terraform state contains sensitive output values — never commit
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+
+# AWS credentials — use aws configure or environment variables
+.aws/
+credentials
+
 # Secrets
 .env
 *.key
 *.pem
-secrets.yml
-credentials.json
-vault.yml
-
-# Ansible
-infrastructure/ansible/inventory/hosts.yml
-infrastructure/ansible/group_vars/all/vault.yml
-
-# Terraform
-terraform/*.tfstate
-terraform/*.tfstate.backup
-terraform/.terraform/
 
 # OS noise
 .DS_Store
-Thumbs.db
 __pycache__/
 *.pyc
-*.log
